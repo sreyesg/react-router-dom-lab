@@ -7,11 +7,11 @@ const initialState = {
 
 export default function MailboxForm(props){
     
-    const [formData, setFormData] = useState(initialState)
+    const [formData, setformData] = useState(initialState)
     
-    const handlgeChange = (event) => {
+    const handleChange = (event) => {
         event.preventDefault()
-        setFormData = ({...FormData, [event.target.name]:event.target.value})
+        setformData({...formData, [event.target.name]:event.target.value})
     }
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -23,16 +23,16 @@ export default function MailboxForm(props){
                 type="text" 
                 name="boxholder" 
                 id="boxholder"
-                value={FormData.boxholder}
-                onChange={handlgeChange}
+                value={formData.boxholder}
+                onChange={handleChange}
                 />
             <label htmlFor="boxSize">Select a Box Size: </label>
             <input 
                 type="text" 
                 name="boxSize" 
                 id="boxSize"
-                value={FormData.boxSize}
-                onChange={handlgeChange}
+                value={formData.boxSize}
+                onChange={handleChange}
                 />
             <button type="submit">Submit</button>
         </form>
