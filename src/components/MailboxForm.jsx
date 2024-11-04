@@ -1,6 +1,9 @@
 import { useState } from "react"
 
-const initialState = {boxholder: '', boxSize:''}
+const initialState = {
+    boxholder: '', 
+    boxSize:''
+}
 
 export default function MailboxForm(props){
     
@@ -8,7 +11,7 @@ export default function MailboxForm(props){
     
     const handlgeChange = (event) => {
         event.preventDefault()
-        setFormData = {}
+        setFormData = ({...FormData, [event.target.name]:event.target.value})
     }
     const handleSubmit = (event) => {
         event.preventDefault()
