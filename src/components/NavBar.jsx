@@ -4,7 +4,7 @@ export default function NavBar(){
         <nav>
             <Link to='/'>Home</Link>
             <Link to='/mailboxes'>Mailboxes</Link>
-            <Link to='/mailboxes/new'>New Mailbox</Link>
+            <Link to='/new-mailbox'>New Mailbox</Link>
         </nav>
     )
 }
