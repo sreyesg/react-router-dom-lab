@@ -2,9 +2,16 @@
 import { Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar';
 import MailboxForm from './components/MailboxForm';
+import { useState } from 'react';
 
 
 const App = () => {
+  const [mailboxes, setMailboxes] = useState([])
+  
+  const addMailbox = (newMailbox) => {
+    newMailbox._id = mailboxes.length + 1
+    setMailboxes([...mailboxes, newMailbox])
+  }
   return (
     <>
       <NavBar />

@@ -1,6 +1,7 @@
 import { useState } from "react"
 
 const initialState = {
+    _id: 0,
     boxholder: '', 
     boxSize:''
 }
