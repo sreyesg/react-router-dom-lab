@@ -30,13 +30,11 @@ export default function MailboxForm(props){
                 onChange={handleChange}
                 />
             <label htmlFor="boxSize">Select a Box Size: </label>
-            <input 
-                type="text" 
-                name="boxSize" 
-                id="boxSize"
-                value={formData.boxSize}
-                onChange={handleChange}
-                />
+            <select  name="boxSize" id="boxSize" onChange={handleChange}>
+                <option value="small">Small</option>
+                <option value="medium">medium</option>
+                <option value="large">large</option>
+            </select>
             <button type="submit">Submit</button>
         </form>
     )
