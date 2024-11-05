@@ -16,6 +16,8 @@ export default function MailboxForm(props){
     }
     const handleSubmit = (event) => {
         event.preventDefault()
+        props.addMailbox(formData)
+        setformData(initialState)
     }
     return (
         <form onSubmit={handleSubmit}>
