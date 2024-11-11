@@ -1,9 +1,18 @@
 // src/App.jsx
+import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar';
 import MailboxForm from './components/MailboxForm';
 import { useState } from 'react';
 
+const initialState = [
+  {_id: 1,
+  boxSize: 'Large',
+  boxholder: 'Rachel',},
+  {_id: 2,
+  boxSize: 'Medium',
+  boxholder: 'Jessica',}
+]; 
 
 const App = () => {
   const [mailboxes, setMailboxes] = useState([])
