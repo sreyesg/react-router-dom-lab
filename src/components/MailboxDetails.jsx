@@ -5,6 +5,9 @@ export default function MailboxDetails( props ) {
 
   const singleMailbox = props.mailboxes.find((mailbox) => mailbox._id === Number(mailboxId))
   
+  if (!singleMailbox) {
+    return <h2>Mailbox Not Found</h2>
+  }
   return(
     <>
     <h2>Mailbox # {singleMailbox._id}</h2>
