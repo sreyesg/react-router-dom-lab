@@ -9,12 +9,9 @@ export default function MailboxDetails( props ) {
     <>
     <h2>Mailbox # {singleMailbox._id}</h2>
     <dl>
-      <dt>Box Number:</dt>
-      <dd>{singleMailbox._id}</dd>
-      <dt>Box Holder:</dt>
-      <dd>{singleMailbox.boxholder}</dd>
-      <dt>Box Size: </dt>
-      <dd>{singleMailbox.boxSize}</dd>
+      <dt>Box Number: {singleMailbox._id}</dt>
+      <dt>Box Holder: {singleMailbox.boxholder}</dt>
+      <dt>Box Size: {singleMailbox.boxSize}</dt>
     </dl>
     </>
   )
