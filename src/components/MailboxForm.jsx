@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
 
 const initialState = {
     _id: 0,
@@ -7,7 +8,7 @@ const initialState = {
 }
 
 export default function MailboxForm(props){
-    
+    const nagivate = useNavigate();
     const [formData, setformData] = useState(initialState)
     
     const handleChange = (event) => {
@@ -15,9 +16,10 @@ export default function MailboxForm(props){
         setformData({...formData, [event.target.name]:event.target.value})
     }
     const handleSubmit = (event) => {
-        event.preventDefault()
-        props.addMailbox(formData)
-        setformData(initialState)
+        event.preventDefault();
+        props.addMailbox(formData);
+        setformData(initialState);
+        nagivate("/mailboxes")
     }
     return (
         <main>
