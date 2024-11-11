@@ -20,6 +20,8 @@ export default function MailboxForm(props){
         setformData(initialState)
     }
     return (
+        <main>
+            <h2>Add a new mailbox</h2>
         <form onSubmit={handleSubmit}>
             <label htmlFor="boxholder">Enter a Boxholder: </label>
             <input 
@@ -37,5 +39,6 @@ export default function MailboxForm(props){
             </select>
             <button type="submit">Submit</button>
         </form>
+        </main>
     )
 }
