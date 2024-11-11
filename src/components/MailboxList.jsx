@@ -1,10 +1,10 @@
 export default function MailboxList ( props ) {
   return (
     <>
-    <h2>Mailboxes</h2>
+    <h2>Mailbox List</h2>
     <ul>
       {props.mailboxes.map((currentMailbox) =>(
-        <li key={currentMailbox._id}>Boxholder: {currentMailbox.boxholder}</li>
+        <li key={currentMailbox._id}>Mailbox {currentMailbox._id}</li>
       ))}
     </ul>
     </>

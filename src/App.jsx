@@ -17,7 +17,7 @@ const initialState = [
 
 const App = () => {
   const [mailboxes, setMailboxes] = useState(initialState)
-  
+
   const addMailbox = (newMailbox) => {
     newMailbox._id = mailboxes.length + 1
     setMailboxes([...mailboxes, newMailbox])
